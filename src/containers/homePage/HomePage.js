@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-
 import {Button} from 'react-bootstrap';
+
+import Card from '../../components/Card/Card';
 
 class HomePage extends Component {
 
@@ -26,10 +27,9 @@ class HomePage extends Component {
     }
 
     renderBeerCards(list){
-        let beerCards = '';
-        list.map((item, index) => {
-            return beerCards+=`<div>${item.name}</div>`;
-        });
+        let beerCards = list.map(
+            (item, index) => <Card item={item} key={index}/>
+        );
         return beerCards;
     }
 }

@@ -10,6 +10,6 @@ import axios from 'axios';
 //         .catch();
 // };
 
-export const fetchBeers = () => {
+function fetchBeers = () => {
     axios.get('https://api.punkapi.com/v2/beers');
 }
