@@ -16,19 +16,15 @@ class HomePageContainer extends Component {
         return(
             <HomePage
                 {...this.props}
-                getBeersList={() => this.getBeersList()}
+                getBeersList={(filter) => this.getBeersList(filter)}
                 beersList={beersList}
             />
         );
     }
 
-    getBeersList(){
-        this.props.dispatch(getBeersThunk());
+    getBeersList(filter){
+        this.props.dispatch(getBeersThunk(filter));
     }
-
-    // getBeerInfo(){
-    //     console.log(123, this.props.beersList);
-    // }
 }
 
 const select = state => ({

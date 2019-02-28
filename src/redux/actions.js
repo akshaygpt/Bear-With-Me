@@ -8,9 +8,9 @@ export const getBeersSync = data => ({
     payload: data
 });
 
-export const getBeersThunk = () => {
+export const getBeersThunk = (filter=null) => {
     return dispatch => {
-        axios.get('https://api.punkapi.com/v2/beers')
+        axios.get('https://api.punkapi.com/v2/beers?beer_name='+filter)
             .then(response => {
                 // console.log(123, response);
                 return dispatch(getBeersSync(response.data));

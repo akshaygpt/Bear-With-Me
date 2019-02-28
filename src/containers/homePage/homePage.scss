@@ -1,5 +1,6 @@
 .homePage{
     text-align: center;
+    color: #fff;
 
     .homePage-menu{
 
@@ -7,6 +8,16 @@
     .homePage-searchsection{
         background: #f79400;
         padding: 40px 60px;
+
+        .homePage-title{
+            margin-bottom: 5px;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .homePage-subtitle{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
     }
 
     .homePage-beers{

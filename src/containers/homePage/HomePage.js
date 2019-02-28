@@ -25,7 +25,7 @@ class HomePage extends Component {
                     <div className='homePage-searchsection'>
                         <div className='homePage-title'>The Beer Bank</div>
                         <div className='homePage-subtitle'>Find your favourite beer here</div>
-                        <Search />
+                        <Search getBeersList={getBeersList}/>
                     </div>
                     <div className='homePage-beers'>
                         {this.renderBeerCards(beersList)}
