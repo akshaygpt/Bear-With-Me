@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import './Card.scss';
+import './card.scss';
 
 
 export default class Card extends Component {
@@ -13,7 +13,7 @@ export default class Card extends Component {
             <div className='card'>
                 <div className='card-fav-btn'></div>
                 <div className='card-image'>
-                    <img src={item.image_url}/>
+                    <img src={item.image_url} alt='beer'/>
                 </div>
                 <div className='card-name'>
                     {item.name}

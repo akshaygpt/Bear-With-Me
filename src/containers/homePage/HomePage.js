@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
 
-import Card from '../../components/Card/Card';
+import Card from '../../base-components/Card/Card';
+import HomeButtons from '../../components/HomeButtons/HomeButtons';
+import Search from '../../base-components/Search/Search';
+
+import './homePage.scss';
 
 class HomePage extends Component {
 
@@ -13,14 +17,19 @@ class HomePage extends Component {
         const {getBeersList, beersList} = this.props;
 
         return(
-            <div>
-                <Button
-                    onClick={() => getBeersList()}
-                >
-                    Fetch beers
-                </Button>
+            <div className='homePage'>
                 <div>
-                    {this.renderBeerCards(beersList)}
+                    <div className='homePage-menu'>
+                        <HomeButtons getBeersList={getBeersList}/>
+                    </div>
+                    <div className='homePage-searchsection'>
+                        <div className='homePage-title'>The Beer Bank</div>
+                        <div className='homePage-subtitle'>Find your favourite beer here</div>
+                        <Search />
+                    </div>
+                    <div className='homePage-beers'>
+                        {this.renderBeerCards(beersList)}
+                    </div>
                 </div>
             </div>
         );

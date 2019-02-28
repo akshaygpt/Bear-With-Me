@@ -1,0 +1,21 @@
+.homeButtons{
+    width: 100%;
+    text-align: right;
+    background: #f79400;
+
+    .homeButtons-homebtn{
+        color: #fff;
+    }
+
+    .homeButtons-favbtn{
+        color: #fff;
+    }
+
+    &.sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: transparent;
+        color: #000;
+    }
+}
