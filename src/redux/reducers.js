@@ -3,7 +3,8 @@
 import {GET_BEERS} from './constants';
 
 const initialState = {
-    beers: []
+    beers: [],
+    favorites: []
 }
 
 function rootReducer(state=initialState, action){

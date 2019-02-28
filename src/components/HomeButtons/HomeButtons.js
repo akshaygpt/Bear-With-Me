@@ -10,7 +10,7 @@ export default class HomeButtons extends Component {
         return(
             <div className='homeButtons'>
                 <Button
-                    onClick={getBeersList}
+                    onClick={() => getBeersList('')}
                     className='homeButtons-homebtn'
                 >
                     Home

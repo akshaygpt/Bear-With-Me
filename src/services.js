@@ -1,4 +1,4 @@
-import axios from 'axios';
+// import axios from 'axios';
 
 // const endpoints = {
 //     getBeers: 'https://api.punkapi.com/v2/beers';
@@ -10,6 +10,6 @@ import axios from 'axios';
 //         .catch();
 // };
 
-function fetchBeers = () => {
-    axios.get('https://api.punkapi.com/v2/beers');
-}
+// function fetchBeers = () => {
+//     axios.get('https://api.punkapi.com/v2/beers');
+// }

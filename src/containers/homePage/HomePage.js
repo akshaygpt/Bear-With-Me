@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
 
-import Card from '../../base-components/Card/Card';
+import Card from '../Card';
 import HomeButtons from '../../components/HomeButtons/HomeButtons';
 import Search from '../../base-components/Search/Search';
 
@@ -14,7 +14,7 @@ class HomePage extends Component {
     }
 
     render(){
-        const {getBeersList, beersList} = this.props;
+        const {getBeersList, beersList, favoritesList} = this.props;
 
         return(
             <div className='homePage'>
@@ -36,6 +36,8 @@ class HomePage extends Component {
     }
 
     renderBeerCards(list){
+        const {favoritesList} = this.props;
+
         let beerCards = list.map(
             (item, index) => <Card item={item} key={index}/>
         );

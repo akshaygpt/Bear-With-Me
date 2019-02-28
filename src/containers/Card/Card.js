@@ -2,16 +2,20 @@ import React, {Component} from 'react';
 
 import './card.scss';
 
-
 export default class Card extends Component {
 
     render(){
-        const {item} = this.props;
-        // console.log(item);
+        const {item, isFavorite, toggleFavorite} = this.props;
+        console.log(item);
 
         return(
             <div className='card'>
-                <div className='card-fav-btn'></div>
+                <div className='card-fav-btn'>
+                    <span
+                        className='icon icon-star-empty'
+                        onClick={() => {toggleFavorite()}}
+                    />
+                </div>
                 <div className='card-image'>
                     <img src={item.image_url} alt='beer'/>
                 </div>

@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 import {GET_BEERS} from './constants';
-// import {fetchBeers} from '../services';
 
 export const getBeersSync = data => ({
     type: GET_BEERS,
@@ -9,8 +8,12 @@ export const getBeersSync = data => ({
 });
 
 export const getBeersThunk = (filter=null) => {
+    const fetchBeers = filter ?
+        'https://api.punkapi.com/v2/beers?beer_name='+filter :
+        'https://api.punkapi.com/v2/beers'
+
     return dispatch => {
-        axios.get('https://api.punkapi.com/v2/beers?beer_name='+filter)
+        axios.get(fetchBeers)
             .then(response => {
                 // console.log(123, response);
                 return dispatch(getBeersSync(response.data));

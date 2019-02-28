@@ -7,7 +7,6 @@ import {
 import {beersSelector} from '../../redux/selectors';
 import HomePage from './HomePage';
 
-
 class HomePageContainer extends Component {
 
     render(){
@@ -17,7 +16,6 @@ class HomePageContainer extends Component {
             <HomePage
                 {...this.props}
                 getBeersList={(filter) => this.getBeersList(filter)}
-                beersList={beersList}
             />
         );
     }
