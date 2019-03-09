@@ -1,0 +1,28 @@
+.favoritesPage{
+    text-align: center;
+    color: #000;
+
+    .favoritesPage-menu{
+
+    }
+    .favoritesPage-searchsection{
+        background: #f79400;
+        padding: 40px 60px;
+
+        .favoritesPage-title{
+            margin-bottom: 5px;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .favoritesPage-subtitle{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .favoritesPage-beers{
+        width: 68vw;
+        margin: 40px auto;
+        text-align: left;
+    }
+}

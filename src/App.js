@@ -1,17 +1,29 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 
-import HomePage from './containers/homePage';
+import HomePage from './containers/HomePage';
+import FavoritesPage from './containers/FavoritesPage';
 
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <HomePage />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Router>
+                <div className="App">
+                    <Route
+                        exact
+                        path="/"
+                        component={HomePage}
+                    />
+                    <Route
+                        path="/favorites"
+                        component={FavoritesPage}
+                    />
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;

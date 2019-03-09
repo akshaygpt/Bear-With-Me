@@ -28,14 +28,14 @@ class HomePage extends Component {
                         <Search getBeersList={getBeersList}/>
                     </div>
                     <div className='homePage-beers'>
-                        {this.renderBeerCards(beersList)}
+                        {this.renderCards(beersList)}
                     </div>
                 </div>
             </div>
         );
     }
 
-    renderBeerCards(list){
+    renderCards(list){
         const {favoritesList} = this.props;
 
         let beerCards = list.map(
