@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {GET_BEERS} from './constants';
+import {GET_BEERS, REMOVE_FROM_FAVORITES, ADD_TO_FAVORITES} from './constants';
 
 export const getBeersSync = data => ({
     type: GET_BEERS,
@@ -15,9 +15,18 @@ export const getBeersThunk = (filter=null) => {
     return dispatch => {
         axios.get(fetchBeers)
             .then(response => {
-                // console.log(123, response);
                 return dispatch(getBeersSync(response.data));
             })
             .catch(error => console.log(error));
     }
 }
+
+export const addToFavorites = id => ({
+    type: ADD_TO_FAVORITES,
+    payload: id
+});
+
+export const removeFromFavorites = id => ({
+    type: REMOVE_FROM_FAVORITES,
+    payload: id
+});

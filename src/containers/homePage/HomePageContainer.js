@@ -9,6 +9,10 @@ import HomePage from './HomePage';
 
 class HomePageContainer extends Component {
 
+    componentDidMount(){
+        this.props.dispatch(getBeersThunk());
+    }
+
     render(){
         const {beersList} = this.props;
 
