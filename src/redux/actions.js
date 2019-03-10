@@ -1,6 +1,12 @@
 import axios from 'axios';
 
-import {GET_BEERS, REMOVE_FROM_FAVORITES, ADD_TO_FAVORITES} from './constants';
+import {
+    GET_BEERS,
+    REMOVE_FROM_FAVORITES,
+    ADD_TO_FAVORITES,
+    SHOW_BEER_DETAILS_MODAL,
+    HIDE_BEER_DETAILS_MODAL
+} from './constants';
 
 export const getBeersSync = data => ({
     type: GET_BEERS,
@@ -29,4 +35,13 @@ export const addToFavorites = id => ({
 export const removeFromFavorites = id => ({
     type: REMOVE_FROM_FAVORITES,
     payload: id
+});
+
+export const showBeerDetailsModal = id => ({
+    type: SHOW_BEER_DETAILS_MODAL,
+    payload: id
+});
+
+export const hideBeerDetailsModal = () => ({
+    type: HIDE_BEER_DETAILS_MODAL
 });

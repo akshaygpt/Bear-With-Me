@@ -36,10 +36,10 @@ class HomePage extends Component {
     }
 
     renderCards(list){
-        const {favoritesList} = this.props;
+        const {favoritesList, beerId} = this.props;
 
         let beerCards = list.map(
-            (item, index) => <Card item={item} key={index}/>
+            (item, index) => <Card item={item} key={index} beerId={beerId}/>
         );
         return beerCards;
     }

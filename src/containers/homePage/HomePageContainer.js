@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {
     getBeersThunk
 } from '../../redux/actions';
-import {beersSelector} from '../../redux/selectors';
+import {beersSelector, modalBeerIdSelector} from '../../redux/selectors';
 import HomePage from './HomePage';
 
 class HomePageContainer extends Component {
@@ -14,12 +14,13 @@ class HomePageContainer extends Component {
     }
 
     render(){
-        const {beersList} = this.props;
+        const {beersList, beerId} = this.props;
 
         return(
             <HomePage
                 {...this.props}
                 getBeersList={(filter) => this.getBeersList(filter)}
+                beerId={beerId}
             />
         );
     }
@@ -30,7 +31,8 @@ class HomePageContainer extends Component {
 }
 
 const select = state => ({
-    beersList: beersSelector(state)
+    beersList: beersSelector(state),
+    beerId: modalBeerIdSelector(state)
 });
 
 export default connect(

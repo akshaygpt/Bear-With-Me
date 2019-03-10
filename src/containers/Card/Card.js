@@ -1,22 +1,23 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
 
-import {addToFavorites, removeFromFavorites} from '../../redux/actions';
+import {addToFavorites, removeFromFavorites, showBeerDetailsModal} from '../../redux/actions';
+import DetailModal from '../DetailModal';
 
 import './card.scss';
 
 export default class Card extends Component {
 
     render(){
-        const {item, isFavorite, toggleFavorite} = this.props;
+        const {item, isFavorite, toggleFavorite, beerId} = this.props;
         const id = item.id;
 
         return(
-            <div className='card'>
+            <div className='beercard' onClick={() => this.onCardClick(item.id)}>
                 <div className='card-fav-btn'>
                     <span
                         className={classnames('icon', isFavorite ? 'icon-star-full' : 'icon-star-empty')}
-                        onClick={() => this.toggleFavorite(id, isFavorite)}
+                        onClick={(e) => this.toggleFavorite(e, id, isFavorite)}
                     />
                 </div>
                 <div className='card-image'>
@@ -28,15 +29,24 @@ export default class Card extends Component {
                 <div className='card-tagline'>
                     {item.tagline}
                 </div>
+                {(id === beerId) && <DetailModal/>}
             </div>
         )
     }
 
-    toggleFavorite(id, isFavorite){
+    onCardClick(id){
+        const {dispatch} = this.props;
+        dispatch(showBeerDetailsModal(id));
+    }
+
+    toggleFavorite(e, id, isFavorite){
+        const {dispatch} = this.props;
+        e.stopPropagation();
+
         if(!isFavorite){
-            this.props.dispatch(addToFavorites(id));
+            dispatch(addToFavorites(id));
         } else {
-            this.props.dispatch(removeFromFavorites(id));
+            dispatch(removeFromFavorites(id));
         }
     }
 }

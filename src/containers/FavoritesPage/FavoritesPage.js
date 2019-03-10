@@ -32,7 +32,6 @@ class FavoritesPage extends Component {
 
     renderCards(list){
         const {favoritesList} = this.props;
-        console.log(list);
 
         if(!list){
             this.noItemsMessage();

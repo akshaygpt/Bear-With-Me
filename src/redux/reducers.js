@@ -1,14 +1,18 @@
 // import {combineReducers} from 'redux';
+import {modalBeerIdSelector} from './selectors';
 
 import {
     GET_BEERS,
     ADD_TO_FAVORITES,
-    REMOVE_FROM_FAVORITES
+    REMOVE_FROM_FAVORITES,
+    SHOW_BEER_DETAILS_MODAL,
+    HIDE_BEER_DETAILS_MODAL
 } from './constants';
 
 const initialState = {
     beers: [],
-    favorites: []
+    favorites: [],
+    modalBeerId: -1
 }
 
 function rootReducer(state=initialState, action){
@@ -30,15 +34,29 @@ function rootReducer(state=initialState, action){
                 ]
             }
 
-            case REMOVE_FROM_FAVORITES:
-                const index = state.favorites.indexOf(payload);
-                const newFavorites = state.favorites.filter(
-                    id => id !== payload
-                )
-                return {
+        case REMOVE_FROM_FAVORITES:
+            const index = state.favorites.indexOf(payload);
+            const newFavorites = state.favorites.filter(
+                id => id !== payload
+            )
+            return {
+                ...state,
+                favorites: newFavorites
+            }
+
+        case SHOW_BEER_DETAILS_MODAL:
+            return {
+                ...state,
+                modalBeerId: payload
+            }
+
+            case HIDE_BEER_DETAILS_MODAL:
+                const newState = {
                     ...state,
-                    favorites: newFavorites
+                    modalBeerId: -1
                 }
+                modalBeerIdSelector(newState);
+                return newState;
 
         default:
             return state;
