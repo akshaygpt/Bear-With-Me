@@ -22,7 +22,10 @@
 
     .favoritesPage-beers{
         width: 68vw;
-        margin: 40px auto;
-        text-align: left;
+        margin: 70px auto 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 960px;
     }
 }

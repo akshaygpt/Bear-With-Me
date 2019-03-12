@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import './search.scss';
+
 export default class Search extends Component {
     state = {
         value: ''
@@ -9,7 +11,7 @@ export default class Search extends Component {
         return(
             <div className='search'>
                 <input
-                    placeholder='Search...'
+                    placeholder='Search for beer name'
                     className='searchInput'
                     onKeyUp={() => {this.searchBeers()}}
                     onChange={(e) => this.updateInput(e)}

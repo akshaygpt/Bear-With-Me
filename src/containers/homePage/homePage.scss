@@ -1,13 +1,14 @@
 .homePage{
     text-align: center;
     color: #fff;
+    background: #eee;
 
     .homePage-menu{
 
     }
     .homePage-searchsection{
         background: #f79400;
-        padding: 40px 60px;
+        padding: 60px 60px 40px;
 
         .homePage-title{
             margin-bottom: 5px;
@@ -22,7 +23,10 @@
 
     .homePage-beers{
         width: 68vw;
-        margin: 0 auto;
-        text-align: left;
+        margin: 40px auto 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 960px;
     }
 }

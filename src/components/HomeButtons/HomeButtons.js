@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
 import {Link} from "react-router-dom";
+import classnames from 'classnames';
 
 import './homeButtons.scss';
 
@@ -13,7 +14,7 @@ export default class HomeButtons extends Component {
                 <Link to='/'>
                     <Button
                         onClick={() => getBeersList('')}
-                        className='homeButtons-homebtn'
+                        className={classnames('nav-btn', 'homeButtons-homebtn')}
                     >
                         Home
                     </Button>
@@ -21,9 +22,9 @@ export default class HomeButtons extends Component {
                 <Link to='/favorites'>
                     <Button
                         onClick={() => {}}
-                        className='homeButtons-favbtn'
+                        className={classnames('nav-btn', 'homeButtons-favbtn')}
                     >
-                        Fav
+                        Favourite
                     </Button>
                 </Link>
             </div>

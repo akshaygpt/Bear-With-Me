@@ -1,20 +1,48 @@
-.homeButtons{
+.homeButtons {
     width: 100%;
     text-align: right;
     background: #f79400;
     position: fixed;
     top: 0;
     left: 0;
+    padding: 8px 20px;
+    z-index: 1;
 
-    .homeButtons-homebtn{
-        color: #000;
+    .nav-btn {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: none;
+
+        &.btn-primary{
+            &:hover{
+                background: transparent;
+                color: #fff;
+                border: none;
+                box-shadow: none;
+            }
+            &:focus{
+                background: transparent;
+                color: #fff;
+                border: none;
+                box-shadow: none;
+            }
+            &:active{
+                background: transparent;
+                color: #fff;
+                border: none;
+                box-shadow: none;
+            }
+            &:not(:disabled):not(.disabled):active{
+                background: transparent;
+                box-shadow: none;
+            }
+        }
     }
 
-    .homeButtons-favbtn{
-        color: #000;
-    }
-
-    &.sticky{
+    &.sticky {
         color: #000;
     }
 }
