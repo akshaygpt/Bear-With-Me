@@ -20,23 +20,23 @@ self.__precacheManifest = [
     "url": "/Bear-With-Me/static/js/runtime~main.b10d4c15.js"
   },
   {
-    "revision": "15816e92496e934d8c92",
-    "url": "/Bear-With-Me/static/js/main.15816e92.chunk.js"
+    "revision": "49bcea510111e9ee6750",
+    "url": "/Bear-With-Me/static/js/main.49bcea51.chunk.js"
   },
   {
-    "revision": "8b26464805ab388d2897",
-    "url": "/Bear-With-Me/static/js/2.8b264648.chunk.js"
+    "revision": "f0ae9152f35f2509b518",
+    "url": "/Bear-With-Me/static/js/2.f0ae9152.chunk.js"
   },
   {
-    "revision": "15816e92496e934d8c92",
+    "revision": "49bcea510111e9ee6750",
     "url": "/Bear-With-Me/static/css/main.c59090cd.chunk.css"
   },
   {
-    "revision": "8b26464805ab388d2897",
+    "revision": "f0ae9152f35f2509b518",
     "url": "/Bear-With-Me/static/css/2.51941159.chunk.css"
   },
   {
-    "revision": "52a529ee2531822cd620d318d583dcf5",
+    "revision": "ec63fda68636f5bcef0b8b0ce04da251",
     "url": "/Bear-With-Me/index.html"
   }
 ];
