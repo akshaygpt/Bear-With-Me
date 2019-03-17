@@ -2,7 +2,7 @@
   "name": "bear-with-me",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://akshaygpt.github.io/Bear-With-Me",
+  "homepage": "https://akshaygpt.github.io/Bear-With-Me/",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
