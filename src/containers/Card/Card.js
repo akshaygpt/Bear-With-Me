@@ -9,7 +9,7 @@ import './card.scss';
 export default class Card extends Component {
 
     render(){
-        const {item, isFavorite, toggleFavorite, beerId} = this.props;
+        const {item, isFavorite, beerId} = this.props;
         const id = item.id;
 
         return(

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Modal} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 import classnames from 'classnames';
 
 import {hideBeerDetailsModal} from '../../redux/actions';
@@ -23,7 +23,7 @@ class DetailModal extends Component {
                 <Modal.Body>
                     <div className={classnames('beer-details-content', 'row')}>
                         <div className={classnames('beer-details-image', 'col-sm-3')}>
-                            <img src={data.image_url} />
+                            <img src={data.image_url} alt=''/>
                         </div>
                         <div className={classnames('beer-details-text', 'col-sm-9')}>
                             <div className={classnames('beer-details-name')}>
@@ -64,11 +64,9 @@ class DetailModal extends Component {
 
     renderBestServedWith(arr){
         if(Array.isArray(arr)){
-            const length = arr.length;
             const servedWith = arr.map((item, index) => {
                 return <li key={index} className='pairings-item'>{item}</li>;
             })
-            console.log(servedWith);
             return servedWith;
         }
     }

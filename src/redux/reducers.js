@@ -16,7 +16,6 @@ const initialState = {
 }
 
 function rootReducer(state=initialState, action){
-
     const payload = action.payload;
 
     switch (action.type){
@@ -35,7 +34,6 @@ function rootReducer(state=initialState, action){
             }
 
         case REMOVE_FROM_FAVORITES:
-            const index = state.favorites.indexOf(payload);
             const newFavorites = state.favorites.filter(
                 id => id !== payload
             )

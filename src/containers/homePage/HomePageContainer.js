@@ -14,7 +14,7 @@ class HomePageContainer extends Component {
     }
 
     render(){
-        const {beersList, beerId} = this.props;
+        const {beerId} = this.props;
 
         return(
             <HomePage

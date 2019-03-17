@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {favoritesSelector, modalBeerIdSelector} from '../../redux/selectors';
-import {addToFavorites, removeFromFavorites} from '../../redux/actions';
 
 import Card from './Card';
 

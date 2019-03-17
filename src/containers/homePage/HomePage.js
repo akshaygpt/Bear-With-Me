@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Button} from 'react-bootstrap';
 
 import Card from '../Card';
 import HomeButtons from '../../components/HomeButtons/HomeButtons';
@@ -9,12 +8,8 @@ import './homePage.scss';
 
 class HomePage extends Component {
 
-    componentDidMount(){
-
-    }
-
     render(){
-        const {getBeersList, beersList, favoritesList} = this.props;
+        const {getBeersList, beersList} = this.props;
 
         return(
             <div className='homePage'>
@@ -36,7 +31,7 @@ class HomePage extends Component {
     }
 
     renderCards(list){
-        const {favoritesList, beerId} = this.props;
+        const {beerId} = this.props;
 
         let beerCards = list.map(
             (item, index) => <Card item={item} key={index} beerId={beerId}/>

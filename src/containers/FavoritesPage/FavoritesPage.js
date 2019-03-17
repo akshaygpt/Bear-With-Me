@@ -1,20 +1,14 @@
 import React, {Component} from 'react';
-import {Button} from 'react-bootstrap';
 
 import Card from '../Card';
 import HomeButtons from '../../components/HomeButtons/HomeButtons';
-import Search from '../../base-components/Search/Search';
 
 import './favoritesPage.scss';
 
 class FavoritesPage extends Component {
 
-    componentDidMount(){
-
-    }
-
     render(){
-        const {getBeersList, beersList, favoritesList, favoriteBeers} = this.props;
+        const {getBeersList, favoriteBeers} = this.props;
 
         return(
             <div className='favoritesPage'>
@@ -31,7 +25,6 @@ class FavoritesPage extends Component {
     }
 
     renderCards(list){
-        const {favoritesList} = this.props;
 
         if(!list){
             this.noItemsMessage();
@@ -44,7 +37,7 @@ class FavoritesPage extends Component {
     }
 
     noItemsMessage(){
-        return <div>{'No favorites'}</div>
+        return <div>No favorites</div>;
     }
 }
 
