@@ -35,7 +35,7 @@ class DetailModal extends Component {
                             <div className='dark-line' />
                             <div className={classnames('beer-details-extras')}>
                                 <div className='extras-section'>
-                                    <span className='extras-name'>IBU:</span>
+                                    <span className='extras-name'>{'IBU:'}</span>
                                     <span className='extras-value'>{data.ibu}</span>
                                 </div>
                                 <div className='extras-section'>
@@ -51,7 +51,7 @@ class DetailModal extends Component {
                                 {data.description}
                             </div>
                             <div className={classnames('beer-details-pairings')}>
-                                <div className='pairings-text'>Best served with:</div>
+                                <div className='pairings-text'>{'Best served with:'}</div>
                                 <ul>{this.renderBestServedWith(food_pairing)}</ul>
                             </div>
                         </div>
